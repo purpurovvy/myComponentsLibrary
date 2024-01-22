@@ -1,7 +1,7 @@
 {
   "name": "@purpurovvy/mylibrary",
   "private": false,
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "author": "Sasd",
   "main": "dist/index.cjs.js",
@@ -12,7 +12,7 @@
   ],
   "repository": "https://github.com/purpurovvy/myComponentsLibrary.git",
   "publishConfig": {
-    "@purpurovvy:registry": "https://npm.pkg.github.com"
+    "@purpurovvy:registry": "https://registry.npmjs.org/"
   },
   "scripts": {
     "dev": "vite",
