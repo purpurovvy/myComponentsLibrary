@@ -1,0 +1,66 @@
+{
+  "name": "mylibrary",
+  "private": false,
+  "version": "0.0.1",
+  "type": "module",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "rollup -c",
+    "test:check": "vitest",
+    "test:update": "vitest -u",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.15.5",
+    "@mui/material": "^5.15.5",
+    "@testing-library/react": "^14.1.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "vitest": "^1.2.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@storybook/addon-essentials": "^7.6.9",
+    "@storybook/addon-interactions": "^7.6.9",
+    "@storybook/addon-links": "^7.6.9",
+    "@storybook/addon-onboarding": "^1.0.10",
+    "@storybook/blocks": "^7.6.9",
+    "@storybook/react": "^7.6.9",
+    "@storybook/react-vite": "^7.6.9",
+    "@storybook/test": "^7.6.9",
+    "@types/jest": "^29.5.11",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "eslint-plugin-storybook": "^0.6.15",
+    "jsdom": "^23.2.0",
+    "rollup": "^4.9.5",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "storybook": "^7.6.9",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8"
+  }
+}
