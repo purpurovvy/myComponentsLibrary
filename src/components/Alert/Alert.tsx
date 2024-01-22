@@ -32,18 +32,17 @@ const alertIcons = {
 const Alert = ({
                           title, message, type, sx,
                       }: AlertProps): React.ReactElement => (
-    // <MuiAlert
-    //     data-testid={`Alert-${type}`}
-    //     color={type}
-    //     icon={alertIcons[type]}
-    //     sx={{...AlertStyles.container, border: (theme: Theme) => `1px solid ${theme.palette[type].main}`, ...sx}}
-    // >
-    //     <Stack direction="column">
-    //         {title && <Typography variant="h6" sx={{color: alertColors[type], fontWeight: 500}}>{title}</Typography>}
-    //         {message && <Typography variant="body1" sx={{overflowWrap: 'anywhere'}}>{message}</Typography>}
-    //     </Stack>
-    // </MuiAlert>
-    <p>{title}</p>
+    <MuiAlert
+        data-testid={`Alert-${type}`}
+        color={type}
+        icon={alertIcons[type]}
+        sx={{...AlertStyles.container, border: (theme: Theme) => `1px solid ${theme.palette[type].main}`, ...sx}}
+    >
+        <Stack direction="column">
+            {title && <Typography variant="h6" sx={{color: alertColors[type], fontWeight: 500}}>{title}</Typography>}
+            {message && <Typography variant="body1" sx={{overflowWrap: 'anywhere'}}>{message}</Typography>}
+        </Stack>
+    </MuiAlert>
 );
 
 export type {AlertProps};
