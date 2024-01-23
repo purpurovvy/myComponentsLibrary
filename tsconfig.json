@@ -10,7 +10,6 @@
     /* Bundler mode */
     "declaration": true,
     "outDir": "dist",
-    "sourceMap": false,
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
