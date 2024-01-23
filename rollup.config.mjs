@@ -4,7 +4,7 @@ import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
 import terser from '@rollup/plugin-terser';
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
-import sourcemaps from 'rollup-plugin-sourcemaps';
+// import sourcemaps from 'rollup-plugin-sourcemaps';
 
 export default [
     {
@@ -13,12 +13,12 @@ export default [
             {
                 file: 'dist/index.cjs.js',
                 format: "cjs",
-                sourcemap: true,
+                sourcemap: false
             },
             {
                 file: 'dist/index.js',
                 format: "esm",
-                sourcemap: true,
+                sourcemap: false
             },
         ],
         plugins: [
@@ -26,14 +26,13 @@ export default [
             resolve(),
             commonjs(),
             typescript({tsconfig: "./tsconfig.json"}),
-            sourcemaps(),
             terser(),
         ],
         external: ["react", "react-dom", "@emotion/react", "@emotion/styled", "@mui/icons-material", "@mui/material"],
     },
     {
         input: "src/index.ts",
-        output: [{file: "dist/types.d.ts", format: "es"}],
+        output: [{file: "dist/types.d.ts", format: "es", sourcemap: false}],
         plugins: [dts()],
     },
 ];
