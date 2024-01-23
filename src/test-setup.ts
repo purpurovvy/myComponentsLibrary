@@ -5,6 +5,7 @@
 import '@testing-library/jest-dom';
 import { vi } from 'vitest';
 
+// @ts-ignore
 Object.defineProperty(window, 'matchMedia', {
     writable: true,
     value: vi.fn().mockImplementation((query) => ({

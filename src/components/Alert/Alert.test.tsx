@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import Alert from './Alert';
+import '@testing-library/jest-dom'
 
 describe('Alert', () => {
     it('renders the title and message', () => {
