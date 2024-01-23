@@ -10,7 +10,7 @@
     /* Bundler mode */
     "declaration": true,
     "outDir": "dist",
-//    "sourceMap": true,
+    "sourceMap": true,
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
@@ -25,13 +25,14 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
-  "exclude": [
-    "node_modules",
-    ".storybook",
-    "storybook-static",
-    "src/stories",
-    "dist",
-  ],
+  "include": ["src/index.ts", "src/**/index.ts"],
+//  "exclude": [
+//    "dist",
+//    "node_modules",
+//    ".storybook",
+//    "storybook-static",
+//    "src/**/*.test.*",
+//    "src/**/*.stories.tsx"
+//  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

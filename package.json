@@ -1,7 +1,7 @@
 {
   "name": "@purpurovvy/mylibrary",
   "private": false,
-  "version": "0.1.4",
+  "version": "0.1.6",
   "type": "module",
   "author": "Sasd",
   "main": "dist/index.cjs.js",
@@ -25,17 +25,17 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.15.5",
     "@mui/material": "^5.15.5",
-    "@testing-library/react": "^14.1.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "vitest": "^1.2.1"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "vitest": "^1.2.1",
+    "@testing-library/react": "^14.1.2",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
